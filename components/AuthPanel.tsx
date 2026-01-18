@@ -70,6 +70,7 @@ export const AuthPanel = ({ session, onAuthError }: AuthPanelProps) => {
   const signInWithEmail = async () => {
     resetFeedback();
     if (!validate()) return;
+    if (!supabase) return;
     setIsLoading(true);
     const { error } = await supabase.auth.signInWithPassword({
       email,
@@ -88,6 +89,7 @@ export const AuthPanel = ({ session, onAuthError }: AuthPanelProps) => {
   const signUpWithEmail = async () => {
     resetFeedback();
     if (!validate()) return;
+    if (!supabase) return;
     setIsLoading(true);
     const { error } = await supabase.auth.signUp({
       email,
@@ -105,6 +107,7 @@ export const AuthPanel = ({ session, onAuthError }: AuthPanelProps) => {
 
   const signInWithProvider = async (provider: "google" | "github") => {
     resetFeedback();
+    if (!supabase) return;
     setIsLoading(true);
     const redirectTo =
       typeof window !== "undefined" ? window.location.origin : undefined;
@@ -122,6 +125,7 @@ export const AuthPanel = ({ session, onAuthError }: AuthPanelProps) => {
 
   const signOut = async () => {
     onAuthError(null);
+    if (!supabase) return;
     const { error } = await supabase.auth.signOut();
     if (error) onAuthError(error.message);
   };
