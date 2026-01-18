@@ -55,7 +55,11 @@ export const TradeCharts = ({ trades, pnlTimeline }: TradeChartsProps) => {
               <Tooltip
                 contentStyle={{ backgroundColor: "#0f172a", border: "none" }}
                 labelStyle={{ color: "#94a3b8" }}
-                formatter={(value: number) => value.toFixed(4)}
+                formatter={(value) =>
+                  value === undefined || value === null
+                    ? "—"
+                    : Number(value).toFixed(4)
+                }
               />
               <Line
                 type="monotone"
@@ -86,7 +90,11 @@ export const TradeCharts = ({ trades, pnlTimeline }: TradeChartsProps) => {
               <Tooltip
                 contentStyle={{ backgroundColor: "#0f172a", border: "none" }}
                 labelStyle={{ color: "#94a3b8" }}
-                formatter={(value: number) => value.toFixed(2)}
+                formatter={(value) =>
+                  value === undefined || value === null
+                    ? "—"
+                    : Number(value).toFixed(2)
+                }
               />
               <Bar dataKey="quote" fill="#34d399" radius={[6, 6, 0, 0]} />
             </BarChart>
@@ -111,7 +119,11 @@ export const TradeCharts = ({ trades, pnlTimeline }: TradeChartsProps) => {
               <Tooltip
                 contentStyle={{ backgroundColor: "#0f172a", border: "none" }}
                 labelStyle={{ color: "#94a3b8" }}
-                formatter={(value: number) => value.toFixed(2)}
+                formatter={(value) =>
+                  value === undefined || value === null
+                    ? "—"
+                    : Number(value).toFixed(2)
+                }
               />
               <Area
                 type="monotone"
