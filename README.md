@@ -3,6 +3,10 @@
 Тёмный трейдинговый интерфейс для загрузки истории торгов, фильтрации сделок,
 расчёта реализованного/нереализованного PnL, комиссий и построения графиков.
 
+<img width="1362" height="773" alt="image" src="https://github.com/user-attachments/assets/c82bfab3-6ad1-42de-b618-2e3a72400253" />
+<img width="1326" height="1139" alt="image" src="https://github.com/user-attachments/assets/dfa3ff64-e653-4f15-a241-3ee39266bea5" />
+<img width="1265" height="1032" alt="image" src="https://github.com/user-attachments/assets/e9255023-2f98-4c29-9961-e73df6b1ce61" />
+
 ## Быстрый старт
 
 ```bash
